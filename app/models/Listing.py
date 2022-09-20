@@ -37,9 +37,10 @@ class Listing(Schema.Model):
     photo_4 = Schema.ImageField(upload_to='listings/%Y/%m/%d/', blank=True)
     photo_5 = Schema.ImageField(upload_to='listings/%Y/%m/%d/', blank=True)
 
+
     #-----------------
     # Models Methods
     #-----------------
-    def __repr__(self):
-        return (f"Listing <'class'> {self.title}")
+    def __str__(self):
+        return self.title
 

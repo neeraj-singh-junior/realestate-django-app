@@ -20,9 +20,10 @@ class User(Schema.Model):
     created = Schema.DateTimeField(default=date.now, blank=True)
     avatar = Schema.ImageField(upload_to='users/%Y/%m/%d/', blank="avatar.png")
 
+
     #-----------------
     # Models Methods
     #-----------------
-    def __repr__(self):
-        return (f"User <'class'> {self.name}")
+    def __str__(self):
+        return self.name
 
